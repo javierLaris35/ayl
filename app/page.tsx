@@ -186,7 +186,7 @@ export default function WeddingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <audio ref={audioRef} loop>
-        <source src="/audio/a&l.mp3" type="audio/mp4" />
+        <source src="/audio/a&l.mp3" type="audio/mpeg" />
       </audio>
 
       {/* Parallax Hero Section */}
