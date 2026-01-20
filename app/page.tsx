@@ -694,9 +694,8 @@ export default function WeddingPage() {
                   {/* Botón No Asistiré */}
                   <Button
                     type="button"
-                    variant="outline"
                     size="lg"
-                    className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 shadow hover:shadow-md transition-all duration-300"
+                    className="w-full border-gray-300 text-white hover:border-gray-400 shadow hover:shadow-md transition-all duration-300"
                     onClick={() => handleWhatsAppConfirm(false)}
                   >
                     <div className="flex items-center justify-center gap-2">
