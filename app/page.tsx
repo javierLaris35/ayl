@@ -248,30 +248,75 @@ export default function WeddingPage() {
       </section>
 
       {/* Countdown Section */}
-      <section className="py-20 px-4 bg-black">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-white">Está apunto de llegar nuestro gran día.</h2>
-          <h2 className="text-2xl md:text-3xl font-serif text-center mb-16 text-white">Faltan...</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+      <section className="py-20 px-4 bg-black relative overflow-hidden">
+        {/* Elementos decorativos de fondo */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 left-10 w-64 h-64 border border-white/20 rounded-full animate-pulse" />
+          <div className="absolute bottom-1/4 right-10 w-48 h-48 border border-white/20 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <h2 className="text-3xl md:text-4xl font-serif text-center mb-6 text-white tracking-wide">Está a punto de llegar nuestro gran día</h2>
+          
+          {/* Línea decorativa */}
+          <div className="flex items-center justify-center mb-12">
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-50" />
+            <Heart className="w-8 h-8 mx-6 text-white fill-white animate-pulse" />
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-50" />
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-cursive text-center mb-16 text-white italic">
+            Faltan...
+          </h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
               { value: timeLeft.days, label: "Días" },
               { value: timeLeft.hours, label: "Horas" },
               { value: timeLeft.minutes, label: "Minutos" },
               { value: timeLeft.seconds, label: "Segundos" },
             ].map((item, index) => (
-              <Card
+              <div
                 key={item.label}
-                className="p-4 text-center bg-black transition-all duration-300 border-none"
+                className="relative group"
                 style={{
-                  animation: `fadeInUp 0.6s ease-out ${index * 0.1}s backwards`,
+                  animation: `fadeInUp 0.8s ease-out ${index * 0.15}s backwards`,
                 }}
               >
-                <div className="text-6xl md:text-8xl font-serif text-white mb-2">
-                  {String(item.value).padStart(2, "0")}
-                </div>
-                <div className="text-sm md:text-base uppercase tracking-wider text-gray-100">{item.label}</div>
-              </Card>
+                {/* Marco decorativo */}
+                <div className="absolute -inset-2 bg-gradient-to-br from-white/10 to-transparent rounded-2xl blur-sm group-hover:blur-md transition-all duration-500" />
+                
+                <Card className="p-6 md:p-8 text-center bg-gradient-to-b from-gray-900 to-black border border-white/10 backdrop-blur-sm relative overflow-hidden transition-all duration-500 group-hover:scale-105 hover:border-white/20">
+                  
+                  {/* Efecto de brillo */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  
+                  <div className="relative">
+                    {/* Número grande con fuente elegante */}
+                    <div className="text-5xl md:text-7xl lg:text-8xl font-cursive text-white mb-3 leading-none tracking-tight">
+                      {String(item.value).padStart(2, "0")}
+                    </div>
+                    
+                    {/* Separador decorativo */}
+                    <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto mb-3" />
+                    
+                    {/* Etiqueta con tipografía delicada */}
+                    <div className="text-xs md:text-sm uppercase tracking-[0.3em] text-gray-300 font-light">
+                      {item.label}
+                    </div>
+                  </div>
+                </Card>
+              </div>
             ))}
+          </div>
+          
+          {/* Fecha destacada */}
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-gradient-to-r from-white/5 to-white/10 border border-white/10">
+              <Calendar className="w-5 h-5 text-white/70" />
+              <span className="text-lg font-light text-white tracking-wider">14 · Febrero · 2026</span>
+              <Calendar className="w-5 h-5 text-white/70" />
+            </div>
           </div>
         </div>
       </section>
@@ -422,7 +467,7 @@ export default function WeddingPage() {
             <form onSubmit={handleFormSubmit} className="space-y-6">
               <div>
                 <label htmlFor="nombre" className="block text-sm font-medium mb-2 text-black">
-                  Nombre Completo
+                  Nombre de los asistentes
                 </label>
                 <Input
                   id="nombre"
@@ -483,7 +528,7 @@ export default function WeddingPage() {
 
               <div>
                 <label htmlFor="mensaje" className="block text-sm font-medium mb-2 text-black">
-                  Mensaje (Opcional)
+                  Escribe una dedicatoria para Ana y Laris.
                 </label>
                 <Textarea
                   id="mensaje"
@@ -495,16 +540,10 @@ export default function WeddingPage() {
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full bg-black hover:bg-gray-800 text-white">
-                <Send className="mr-2 h-5 w-5" />
-                Confirmar Asistencia
-              </Button>
-
-              <Button
+             <Button
                 type="button"
-                variant="outline"
                 size="lg"
-                className="w-full border-black text-black hover:bg-gray-100 bg-transparent"
+                className="w-full text-white bg-black hover:bg-gray-700"
                 onClick={handleWhatsAppConfirm}
               >
                 <Send className="mr-2 h-5 w-5" />
