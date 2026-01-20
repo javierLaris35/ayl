@@ -187,7 +187,6 @@ export default function WeddingPage() {
     <div className="min-h-screen bg-background text-foreground">
       <audio ref={audioRef} loop>
         <source src="/audio/wedding-song.m4a" type="audio/mp4" />
-        <source src="/audio/wedding-song.mp3" type="audio/mpeg" />
       </audio>
 
       {/* Parallax Hero Section */}
@@ -251,7 +250,8 @@ export default function WeddingPage() {
       {/* Countdown Section */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-white">Faltan...</h2>
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-white">Está apunto de llegar nuestro gran día.</h2>
+          <h2 className="text-2xl md:text-3xl font-serif text-center mb-16 text-white">Faltan...</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {[
               { value: timeLeft.days, label: "Días" },
@@ -380,6 +380,7 @@ export default function WeddingPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-serif mb-8 text-black">Código de Vestimenta</h2>
+          <h2 className="text-2xl md:text-3xl font-serif mb-8 text-black">Formal</h2>
           <p className="text-xl md:text-2xl text-gray-700 mb-8">Exclusivo Negro</p>
 
           <div className="flex justify-center mb-8">
