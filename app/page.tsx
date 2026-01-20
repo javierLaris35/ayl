@@ -407,7 +407,7 @@ export default function WeddingPage() {
           <p className="text-xl text-white mb-4">Lluvia de Sobres</p>
           <p className="text-white max-w-xl mx-auto">
             Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle con nosotros, agradeceremos tu
-            aportación para comenzar nuestra nueva vida juntos.
+            aportación en efectivo.
           </p>
         </div>
       </section>
@@ -437,7 +437,7 @@ export default function WeddingPage() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2 text-black">
-                  Correo Electrónico
+                  Correo Electrónico (Opcional)
                 </label>
                 <Input
                   id="email"
