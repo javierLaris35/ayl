@@ -15,7 +15,7 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: "Ana & Laris - Save the Date",
-  description: "Invitación de boda - 15 de Junio, 2026 - La Querencia, Ciudad Obregón",
+  description: "Invitación de boda - 14 de Febrero, 2026 - La Querencia, Ciudad Obregón",
   generator: "v0.app",
   icons: {
     icon: [
