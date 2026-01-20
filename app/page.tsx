@@ -190,6 +190,7 @@ export default function WeddingPage() {
         <source src="/audio/wedding-song.mp3" type="audio/mpeg" />
       </audio>
 
+      {/* Parallax Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
           <ParallaxImage
@@ -224,6 +225,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
+      {/* Romantic Quote Section */}
       <section ref={quoteRef} className="py-20 px-4 bg-black">
         <div
           className={`max-w-3xl mx-auto text-center transition-all duration-1000 ${
@@ -238,6 +240,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
+      {/* Our Story Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-black">Nuestra Historia</h2>
@@ -245,6 +248,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
+      {/* Countdown Section */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-white">Faltan...</h2>
@@ -276,6 +280,34 @@ export default function WeddingPage() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-black">Nuestro Día Especial</h2>
+          
+          {/* Imagen agregada */}
+          <div className="flex justify-center mb-12">
+            <div className="relative w-full max-w-3xl"> {/* Aumenté el max-w a 3xl */}
+              {/* Gradiente de gris oscuro a negro */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-2xl transform rotate-2"></div>
+              
+              <div className="relative rounded-xl overflow-hidden border-8 border-white shadow-2xl">
+                {/* Contenedor de imagen con object-contain para verla completa */}
+                <div className="w-full h-72 md:h-96 bg-gray-900 flex items-center justify-center">
+                  <img 
+                    src="/anaylaris.png" 
+                    alt="Nuestro día especial" 
+                    className="max-w-full max-h-full object-contain p-2"
+                  />
+                </div>
+              </div>
+              
+              {/* Elemento decorativo opcional */}
+              <div className="absolute -top-3 -right-3 w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-black flex items-center justify-center shadow-lg">
+                <Heart className="w-6 h-6 text-white/80" />
+              </div>
+              <div className="absolute -bottom-3 -left-3 w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-black flex items-center justify-center shadow-lg">
+                <Heart className="w-6 h-6 text-white/80" />
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="p-8 bg-white border-gray-300 hover:scale-105 transition-transform duration-300">
               <div className="flex items-center justify-center mb-6">
@@ -283,11 +315,11 @@ export default function WeddingPage() {
                   <Calendar className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-serif text-center mb-4 text-black">Ceremonia Civil</h3>
+              <h3 className="text-2xl font-serif text-center mb-4 text-black">Ceremonia</h3>
               <div className="space-y-4 text-center">
                 <div className="flex items-center justify-center gap-2 text-gray-600">
                   <Clock className="w-5 h-5" />
-                  <span>6:00 PM</span>
+                  <span>6:15 PM</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-gray-600">
                   <MapPin className="w-5 h-5" />
@@ -303,7 +335,7 @@ export default function WeddingPage() {
                   <Heart className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-serif text-center mb-4 text-black">Fiesta</h3>
+              <h3 className="text-2xl font-serif text-center mb-4 text-black">Recepción</h3>
               <div className="space-y-4 text-center">
                 <div className="flex items-center justify-center gap-2 text-gray-600">
                   <Clock className="w-5 h-5" />
@@ -334,6 +366,7 @@ export default function WeddingPage() {
       {/* No childs section */}
       <section className="py-16 px-4 bg-black">
         <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-serif mb-8 text-white">¡Exclusivo Adultos!</h2>
           <Heart className="w-10 h-10 mx-auto mb-4 text-white" />
           <p className="text-lg text-white mb-2">Aunque amamos a los pequeños de la familia</p>
           <p className="text-white">
@@ -366,7 +399,7 @@ export default function WeddingPage() {
       {/* Gift Suggestions Section */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-serif mb-8 text-black">Sugerencia de Regalo</h2>
+          <h2 className="text-4xl md:text-5xl font-serif mb-8 text-white">Sugerencia de Regalo</h2>
           <div className="mb-8">
             <Mail className="w-16 h-16 mx-auto text-white mb-4" />
           </div>

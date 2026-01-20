@@ -49,7 +49,7 @@ export function ImageCarousel({ images, autoPlayInterval = 5000 }: ImageCarousel
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img src={image.url || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
+            <img src={image.url || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-contain" />
           </div>
         ))}
       </div>
