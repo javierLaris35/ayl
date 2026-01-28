@@ -394,11 +394,11 @@ export default function WeddingPage() {
               <div className="space-y-4 text-center">
                 <div className="flex items-center justify-center gap-2 text-gray-600">
                   <Clock className="w-5 h-5" />
-                  <span>6:15 PM</span>
+                  <span>7:00 PM</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-gray-600">
                   <MapPin className="w-5 h-5" />
-                  <span>La Querencia</span>
+                  <span>Quinta La Mas Querida</span>
                 </div>
                 <p className="text-sm text-gray-600">Ciudad Obregón, Sonora</p>
               </div>
@@ -414,11 +414,11 @@ export default function WeddingPage() {
               <div className="space-y-4 text-center">
                 <div className="flex items-center justify-center gap-2 text-gray-600">
                   <Clock className="w-5 h-5" />
-                  <span>7:00 PM</span>
+                  <span>7:30 PM</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-gray-600">
                   <MapPin className="w-5 h-5" />
-                  <span>La Querencia</span>
+                  <span>Quinta La Mas Querida</span>
                 </div>
                 <p className="text-sm text-gray-600">Ciudad Obregón, Sonora</p>
               </div>
@@ -429,7 +429,7 @@ export default function WeddingPage() {
             <Button
               size="lg"
               className="bg-black hover:bg-gray-800 text-white"
-              onClick={() => window.open("https://maps.google.com/?q=La+Querencia+Ciudad+Obregon", "_blank")}
+              onClick={() => window.open("https://maps.google.com/?q=Quinta+La+Mas+Querida+Ciudad+Obregon", "_blank")}
             >
               <MapPin className="mr-2 h-5 w-5" />
               Ver Ubicación en Maps
