@@ -707,7 +707,7 @@ export default function WeddingPage() {
                   </Button>
                 </div>
                 <p className="text-sm text-center text-gray-900 pt-2">
-                  Fecha limite de confirmación: 1 de Febrero, 2026
+                  Fecha limite de confirmación: 5 de Febrero, 2026
                 </p>
 
                 {/* Nota */}
